@@ -23,3 +23,8 @@ def multiply(c: int, d: int):
 @app.get("/square/{e}")
 def square(e: int):
     return {"square": e * e}
+
+@app.get("/percent/{f}")
+def percent(f: int):
+    return {"percent": f * 0.01}
+
