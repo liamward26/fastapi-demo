@@ -28,3 +28,8 @@ def square(e: int):
 def percent(f: int):
     return {"percent": f * 0.01}
 
+@app.get("/subtract/{g}/{h}")
+def subtract(g: int, b: int):
+    return {"difference": g - h}
+
+
