@@ -13,7 +13,7 @@ DBUSER = "admin"
 DBPASS = os.getenv('DBPASS')
 DB = "vhk7vr"
 
-db = mysql.connector.connect(user=DBUSER, host=DBHOST, password=DBPASS, autocommit=TRUE,
+db = mysql.connector.connect(user=DBUSER, host=DBHOST, password=DBPASS, autocommit=True,
 database=DB)
 cur=db.cursor()
 
