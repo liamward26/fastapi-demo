@@ -24,8 +24,7 @@ app.add_middleware(
 
 @app.get('/genres')
 def get_genres():
-    db = mysql.connector.connect(user=DBUSER, host=DBHOST, password=DBPASS, autocommit=True,
-    database=DB)
+    db = mysql.connector.connect(user=DBUSER, host=DBHOST, password=DBPASS, autocommit=True, database=DB)
     cur=db.cursor()
     query = "SELECT * FROM genres ORDER BY genreid;"
     try:    
@@ -45,8 +44,7 @@ def get_genres():
     
 @app.get('/songs')
 def get_songs():
-    db = mysql.connector.connect(user=DBUSER, host=DBHOST, password=DBPASS, autocommit=True,
-    database=DB)
+    db = mysql.connector.connect(user=DBUSER, host=DBHOST, password=DBPASS, autocommit=True, database=DB)
     cur=db.cursor()
     query = "SELECT songs.title, songs.album, songs.artist, songs.year, songs.file, songs.image, genres.genre FROM songs JOIN genres ON songs.genre=genres.genreid ORDER BY songs.title ASC;"
     try:    
